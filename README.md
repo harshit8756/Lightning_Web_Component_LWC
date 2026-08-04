@@ -1,3 +1,30 @@
+# Zodiac Sign Generator (Salesforce LWC)
+
+A Lightning Web Component that generates a user's zodiac sign based on their Date of Birth.
+
+## Features
+
+- Enter Name
+- Select Date of Birth
+- Generate Zodiac Sign
+- Shows:
+  - Zodiac Emoji
+  - Zodiac Element
+  - Planet
+  - Lucky Color
+  - Lucky Number
+  - Personality Traits
+
+## Technologies
+
+- Salesforce LWC
+- JavaScript
+- HTML
+- CSS
+
+## Author
+
+Harshit Yadav
 # Salesforce DX Project
 
 Salesforce DX is a development approach that brings source-driven development, team collaboration, and continuous integration to the Salesforce Platform. Instead of working directly in an org through a web browser, you work with metadata as source files in a local DX project, track changes in version control, and deploy through automated processes.
