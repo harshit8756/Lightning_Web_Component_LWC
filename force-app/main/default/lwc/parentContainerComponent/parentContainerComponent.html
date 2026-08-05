@@ -1,5 +1,15 @@
 <template>
-    Parent Container Component
+    Parent Container Component <br>
+    Did I find any products? {productsFound}
+    <br>
+
+    <!-- this is the way that we have to call the component inside the another component. -->
+    {productList}
+    <br>
+    Conditional rendering in LWC is done using the if:true and if:false directives. The if:true directive renders the template if the condition is true, while the if:false directive renders the template if the condition is false.
+    <template for:each = {productList} for:item = "product">
+        <p key= {product.id}>{product.name}</p>
+    </template>
 
     <!-- Calling another component inside the parent component
     this is the way that we have to call the component inside the another component. -->
