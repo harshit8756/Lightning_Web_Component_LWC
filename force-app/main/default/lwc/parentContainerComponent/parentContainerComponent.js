@@ -12,4 +12,11 @@ export default class ParentContainerComponent extends LightningElement {
     // then we can use this variable in the child component and it is only accessible in the child measn it si an private variable and
     // it is not accessible in the parent component.
     @api productList;
+    parentCalled = false;
+
+    // now this is exposed via @api decorator and now we can call this method from the parent component
+    // aand this method will be called when the parent component calls this method.
+    @api handleParentCall(){
+        this.parentCalled = true;
+    }
 }

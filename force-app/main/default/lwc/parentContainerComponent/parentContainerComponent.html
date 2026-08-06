@@ -16,6 +16,16 @@
 
     <!-- Calling another component inside the parent component
     this is the way that we have to call the component inside the another component. -->
+
+
+    <!-- now we are trying to call the method from the child component to the parent component.
+    so we can use the event to call the method from the child component to the parent component.
+    working scenario: when we call this method on the parent component,it will be called from the child component and it will be called from the parent component. -->
+    <template lwc:if = {parentCalled}>
+        Show that the method is called from the container component!
+        It has not been called from the chlid component.
+
+    </template>>
     
 
 </template>
