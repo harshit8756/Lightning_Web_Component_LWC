@@ -53,5 +53,11 @@ export default class ReactivityCheckLwc extends LightningElement {
     // create method for the update address value and check reacactivity of the component
     handleAddressUpdate() {
         this.userAddress = '456 Elm St, Springfield, USA';
+        this.complexReactivityCheckJson[0].name = 'updatedName';
+        this.complexReactivityCheckJson[0].email = 'updated.email@example.com';
+        this.complexReactivityCheckJson[0].price = 1000.00;
+        this.complexReactivityCheckJson[0].city = 'New York';
+        this.complexReactivityCheckJson[0].active = true;
+        // now accessing the object and changing some data on the parent level and check the reactivity of the child component.
     }
 }
