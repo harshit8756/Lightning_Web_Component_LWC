@@ -3,8 +3,7 @@ import { LightningElement } from 'lwc';
 export default class ReactivityCheckLwc extends LightningElement {
     userAddress = '123 Main St, Springfield, USA';
     // let assume this data comes from database in JSON format
-    complexReactivityCheckJson = [
-        {
+    complexReactivityCheckJson = [{
             "id": "a4c05e97-94b1-426e-a2bd-a609ad233cf4",
             "name": "Sofia White",
             "email": "arjun.davis72@service.co",
