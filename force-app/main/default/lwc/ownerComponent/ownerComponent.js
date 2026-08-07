@@ -12,4 +12,10 @@ export default class OwnerComponent extends LightningElement {
         { id: '4', name: 'Product D', rating: 4.7 },
         { id: '5', name: 'Product E', rating: 4.2 }
     ];
+
+    callChildMethod(){
+        console.log('Calling child method from parent component');
+        //Calling child component method from parent component using querySelector and then calling the method using the reference of the child component.
+        this.template.querySelector('c-parent-container-component').handleParentCall();
+    }
 }
