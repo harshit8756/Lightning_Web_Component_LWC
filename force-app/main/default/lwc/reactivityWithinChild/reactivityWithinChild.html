@@ -1,4 +1,15 @@
 <template>
     {userAddress}
-    
+    <br>
+
+    <!-- from this initialization we don't access the details directly because the date is an object whihc consider as a array adn we need to access from the iterator  -->
+    <!-- {complexReactivityCheckJson.name} -->
+
+    <template for:each={complexReactivityCheckJson} for:item = "iteratorForArray">
+        <div key={iteratorForArray.id}>
+            {iteratorForArray.name}
+        </div>
+    </template>
+    <br>
+
 </template>
