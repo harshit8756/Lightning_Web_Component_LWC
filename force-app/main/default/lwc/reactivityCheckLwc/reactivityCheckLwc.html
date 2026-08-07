@@ -1,3 +1,18 @@
 <template>
+    <lightning-card title="Reactivity Check Component">
+        <div class="slds-m-around-medium">
+            {userAddress}
+            <!-- Creating button to update the address value and check reacactivity of the component -->
+            <lightning-button label = "Check Primitive Reactivity Value" onclick={handleAddressUpdate}></lightning-button>
+        </div>     
+    </lightning-card>
+
+    <!-- Creating new lightning component as a child component to check the reactivity of the primitive value in the child component. -->
     
+    <lightning-card title="Child Component">
+        <div class="slds-m-around-medium">
+            <c-reactivity-within-child user-address = {userAddress}></c-reactivity-within-child>
+        </div>
+    </lightning-card>
+
 </template>
