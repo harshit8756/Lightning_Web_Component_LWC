@@ -1,7 +1,21 @@
 <template>
     <c-slot-child-setter>
-        <div class = "slds-m-around_medium">
-            Added content from parent component to child component using slot.
+
+        <div slot="slot1" class="slds-m-around_medium">
+            <lightning-card title="This is the Slot 1 component">
+                SLot 1 , this is coming from slot 1
+            </lightning-card>
         </div>
+
+        <div slot="slot1" class="slds-m-around_medium">
+            SLot 2
+        </div>
+
+        <div slot="slot1" class="slds-m-around_medium">
+            SLot 3
+        </div>
+
+        This content is being rendered by the default slot and has not been picked up by any of the named slot.
+
     </c-slot-child-setter>
 </template>
