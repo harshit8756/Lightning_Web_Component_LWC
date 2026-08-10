@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Import Utility LWC">
+        <img src={src} alt="No image found" srcset="">
+
+        <template lwc:if={showInProduction}>
+            Welcome to your production system
+        </template>
+
+        <template lwc:else>
+            Welcome to your Sandbox system
+        </template>
+
+        <!-- {svrExample} this gives me the resources of the static resources  -->
+        <img src={svrExample} alt="no image found">
+    </lightning-card>
+
+    
+
+
+
+</template>
