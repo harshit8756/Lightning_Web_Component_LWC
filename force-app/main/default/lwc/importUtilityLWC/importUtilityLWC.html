@@ -3,10 +3,13 @@
         THE CURRENT LOGGED IN USER IS {user}
         User have the permission or not {hasPermission}
         <img src={src} alt="No image found" srcset="">
+        THIS IS THE DEVICE INFO : {device}
 
         <template lwc:if={showInProduction}>
             Welcome to your production system
         </template>
+
+        <!-- i8n : industrilization module in LWC -->
 
         <template lwc:else>
             Welcome to your Sandbox system

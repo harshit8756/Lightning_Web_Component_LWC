@@ -5,12 +5,17 @@ import svgVariable from "@salesforce/resourceUrl/SvgResources";
 import USERWITHID from '@salesforce/user/Id';
 import HASPERMISSION from "@salesforce/userPermission/ViewSetup";
 
+//Form Factor
+import DEVICEINFORMATION from "@salesforce/client/formFactor"
+
 export default class ImportUtilityLWC extends LightningElement {
     src = mylogo;
     //showInProduction = false;
     svrExample = svgVariable;
     user = USERWITHID;
     //permission = HASPERMISSION;
+
+    device = DEVICEINFORMATION;
 
     get showInProd() {
         return customLabels == "true" ? true : false;
