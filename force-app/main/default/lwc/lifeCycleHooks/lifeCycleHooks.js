@@ -8,21 +8,21 @@ export default class LifeCycleHooks extends LightningElement {
 
     constructor(){
         super();
-        console.log('Constructor is called');
+        //console.log('Constructor is called');
     }
 
     connectedCallback(){
-        console.log('Connected Callback is called');
+       // console.log('Connected Callback is called');
     }
 
     renderedCallback(){
-        console.log('Rendered Callback is called');
+       // console.log('Rendered Callback is called');
     }
 
     disconnectedCallback(){
-        console.log('Disconnected Callback is called when is done with it was supposed to do');
+        //console.log('Disconnected Callback is called when is done with it was supposed to do');
     }
     errorCallback(stack, trace){
-        console.log(stack + '----' + trace);
+       // console.log(stack + '----' + trace);
     }
 }
