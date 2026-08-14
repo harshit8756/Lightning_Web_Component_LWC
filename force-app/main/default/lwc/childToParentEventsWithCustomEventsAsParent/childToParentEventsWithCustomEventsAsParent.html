@@ -1,3 +1,11 @@
 <template>
-    <lightning-card title="Parent Component as Child-Parent Data Passing"></lightning-card>
+
+    <lightning-card title="Parent Component as Child-Parent Data Passing">
+        <div class="slds-m-around_medium">
+            <p> <b> Received this value from the Child Component : {showFinalValue}</b></p> 
+            <c-child-to-trigger-event-custom-events-as-child onsenddatachildtoparent = {hanldeOnParentSide}></c-child-to-trigger-event-custom-events-as-child>
+        </div>
+        
+    </lightning-card>
+    
 </template>

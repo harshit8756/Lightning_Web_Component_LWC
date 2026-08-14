@@ -1,3 +1,10 @@
 <template>
-    <lightning-card title="Child Component as Child-Parent Data Passing"></lightning-card>
+    <lightning-card title="Child Component as Child-Parent Data Passing">
+        <div class="slds-m-around_medium">
+            <lightning-button label="Publish Data from Child to Parent" onclick={handleChildToParent}></lightning-button>
+            <br>
+            {selectedProduct}
+        </div>
+        
+    </lightning-card>
 </template>
