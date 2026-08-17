@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Record Form with Custom Layout via Lightning Data Service">
+        <div class="slds-m-around_medium">
+            <!-- for these we have three things : recordId, which object (objectApiName) and Fields to used in the record form-->
+            <!--we find record id with the some variable -->
+            <lightning-record-view-form record-id={recordId} object-api-name={objectApiName}>
+                <!-- Custom layout of your own -->
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-col slds-size_1-of-2">
+                        
+                    </div>
+                </div>
+            </lightning-record-view-form>
+        </div>
+
+    </lightning-card>
+</template>
