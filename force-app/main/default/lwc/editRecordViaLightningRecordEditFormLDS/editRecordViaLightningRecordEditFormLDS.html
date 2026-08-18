@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Edit Record with Custom Layout via lightning-record-edit-form">
+        <div class="slds-m-around_medium">
+            <!-- to be able to edit a record with custom fields/layout -->
+            <lightning-record-edit-form record-id = {recordId} object-api-name= {objectApiName}>
+                <lightning-messages></lightning-messages>
+                <lightning-input-field field-name="CaseNumber"></lightning-input-field>
+                <lightning-input-field field-name="Origin"></lightning-input-field>
+                <lightning-input-field field-name="Type"></lightning-input-field>
+                <lightning-input-field field-name="Region"></lightning-input-field>
+                <lightning-input-field field-name="Status"></lightning-input-field>
+                <lightning-input-field field-name="SLAViolation__c" required></lightning-input-field>
+
+                <!-- Button for submit -->
+                <lightning-button type="submit" label="save" variant="brand"></lightning-button>
+            </lightning-record-edit-form>
+
+
+        </div>
+    </lightning-card>
+</template>
