@@ -1,3 +1,17 @@
 <template>
-    
+    <div class="slds-card slds-p-around_medium">
+        <lightning-record-edit-form density="compact" object-api-name={objectApiName}>
+            <lightning-messages></lightning-messages>
+            <!-- Crate a case and bascially look at how and when the events are fired behind hte scenes  -->
+            <lightning-input-field field-name="Subject"></lightning-input-field>
+            <lightning-input-field field-name="Origin"></lightning-input-field>
+            <lightning-input-field field-name="Reason"></lightning-input-field>
+            <lightning-input-field field-name="Type"></lightning-input-field>
+            <lightning-input-field field-name="Description"></lightning-input-field>
+
+            <lightning-button type="submit" variant="brand" label="Create"></lightning-button>
+            <lightning-button type="reset" variant="outline" label="Reset form"></lightning-button>
+        </lightning-record-edit-form>
+    </div>
+
 </template>
