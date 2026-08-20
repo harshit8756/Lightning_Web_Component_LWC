@@ -3,23 +3,18 @@
         <!-- Use case - I am allowing user to fill in mandatory fields, but this time: we do not use LDS System like record-form, record-view-form, record-edit-form -->
         <!-- Bascially ask user multiple inputs -->
         <div class="slds-p-around_medium lgc-bg">
-            <lightning-input type="text" label="Enter Subject" placeholder="Type the subject here !!"
-                required></lightning-input>
-
-            <lightning-textarea name="Description" label="Enter the issue that you are facing"></lightning-textarea>
-
-            <lightning-combobox name="Priority" label="Priority" placeholder="Select Priority"
-                options={priorityOptions}>
-            </lightning-combobox>
-
+            <lightning-input type="text" label="Enter Subject" value={subject} placeholder="Type the subject here !!"
+                onchange={handleSubjectChange} required></lightning-input>
+            <lightning-textarea name="Description" label="Enter the issue that you are facing" value={description}
+                onchange={handleDescriptionChange}></lightning-textarea>
+            <!-- three variables are binded with the combobox, textarea and input with the value attribute that we have created in the js file -->
+            <lightning-combobox name="Priority" label="Priority" placeholder="Select Priority" options={priorityOptions}
+                value={priority} onchange={handlePriorityChange}></lightning-combobox>
         </div>
-
         <div class="slds-m-top_medium lgc-bg">
             <lightning-button variant="brand" label="Create Case" title="Using for case creation"
-            class="slds-m-left_x-small" icon-name="utility:download"></lightning-button>
+                class="slds-m-left_x-small" icon-name="utility:check"></lightning-button>
         </div>
-        
-
 
     </lightning-card>
 </template>
