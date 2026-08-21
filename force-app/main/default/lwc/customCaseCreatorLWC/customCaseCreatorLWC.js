@@ -18,18 +18,24 @@ export default class CustomCaseCreatorLWC extends LightningElement {
     //is called input and change event listener
 
     handleSubjectChange(event) {
-        console.log('Subject changed:', event.target.value);
-        this.subject = event.target.value;
+        //console.log('Subject changed:', event.target.value);
+        this.subject = event.detail.value;
     }
 
     handleDescriptionChange(event) {
-        console.log('Description changed:', event.detail.value);
+        // console.log('Description changed:', event.detail.value);
         this.description = event.detail.value;
     }
 
     handlePriorityChange(event) {
-        console.log('Priority changed:', event.detail.value);
+        // console.log('Priority changed:', event.detail.value);
         this.priority = event.detail.value;
+    }
+
+    // I have the vaues and now I have to create the case record using the createRecord method so that we can create the case record in the Salesforce database
+    // without calling apex or server side code we can create the record using the createRecord method
+    handleCreateCase() {
+        
     }
 
 }
