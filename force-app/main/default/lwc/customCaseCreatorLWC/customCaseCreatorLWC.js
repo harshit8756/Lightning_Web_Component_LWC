@@ -1,14 +1,33 @@
-import { LightningElement } from 'lwc';
+import { LightningElement, wire } from 'lwc';
 import { createRecord } from 'lightning/uiRecordApi';
+import {getObjectInfo} from 'lightning/uiObjectInfoApi';
 import CASE_OBJECT from '@salesforce/schema/Case';
 import SUBJECT from '@salesforce/schema/Case.Subject';
 import PRIORITY from '@salesforce/schema/Case.Priority';
 import DESCRIPTION from '@salesforce/schema/Case.Description';
+import RECORDID from '@salesforce/schema/Case.RecordTypeId';
 
 export default class CustomCaseCreatorLWC extends LightningElement {
     subject = '';
     description = '';
     priority = '';
+    recordTypeId = '';
+
+    // record type id
+    // it will give you the entire object metadata so we can check and use one of them in the our code
+    @wire(getObjectInfo , {objectApiName : CASE_OBJECT}) caseRecord({data , error}){
+        if(data){
+            //meta-data of the entire Case Object and we will get the recordId from the metadata and we use the @wire annotation method for that 
+            let recordTypeDetails = data.recordTypeInfos;
+            console.log('Data Recevied : ' + JSON.stringify(data));
+            Object.keys(recordTypeDetails).forEach((key) => {
+                const recordTypeInfo = recordTypeDetails[key];
+                if(recordTypeInfo.name == 'Case Record Type'){
+                    this.recordTypeId = recordTypeInfo.recordTypeId;
+                }
+            })
+        }
+    }
 
     get priorityOptions() {
         return [
@@ -46,6 +65,7 @@ export default class CustomCaseCreatorLWC extends LightningElement {
         fields[SUBJECT.fieldApiName] = this.subject;
         fields[PRIORITY.fieldApiName] = this.priority;
         fields[DESCRIPTION.fieldApiName] = this.description;
+        fields[RECORDID.fieldApiName] = this.recordTypeId;
 
         // object api bname and the list of fields
         // Case Object and fields : Subject , Priority , description
