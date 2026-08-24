@@ -50,12 +50,12 @@ export default class CustomCaseCreatorLWC extends LightningElement {
         // object api bname and the list of fields
         // Case Object and fields : Subject , Priority , description
         let recrodInput = { apiName: CASE_OBJECT.objectApiName, fields };
-        const caseRecord = await createRecord(recrodInput)
+        await createRecord(recrodInput)
         .then((record) => {
-
+            alert('Case has been created successfully' + record.id);
         })
             .catch((err) => {
-
+                alert('Something went wrong' + error.body.message);
             });
 
         // As soon as the record is create or error will come you actually want to alert it
