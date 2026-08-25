@@ -15,7 +15,8 @@ export default class CaseListWithWireUsingApexController extends LightningElemen
     @wire(getCasesInSequence)
     wiredCases({ data, error }) {
 
-        if (data) {
+        try{
+            if (data) {
             this.caseList = data;
             this.errorMessage = '';
             console.log('Cases received:', data);
@@ -27,5 +28,10 @@ export default class CaseListWithWireUsingApexController extends LightningElemen
             this.errorMessage = error.body.message;
             console.error('Error is received while connecting to Apex Controller:', error);
         }
+        }
+        catch(error){
+            console.log('Error found while trying to retrieve the Casese');
+        }
+        
     }
 }
