@@ -1,0 +1,14 @@
+<template>
+    <!-- get all my cases from the database that I have queried into LWC and display them in some sort of table -->
+    <lightning-card title="Case List With Wire Using Apex Controller LWC">
+        <template for:each={caseList} for:item="caseRecord">
+            <div key = {caseRecord.Id} class="slds-m-around_medium">
+                {caseRecord.Subject}
+                -
+                {caseRecord.Reason}
+                -
+                {caseRecord.Priority}
+            </div>
+        </template>
+    </lightning-card>
+</template>
