@@ -4,6 +4,7 @@ import getCasesInSequence from '@salesforce/apex/CaseControllerLWC.getCasesInSeq
 export default class CaseListWithWireUsingApexController extends LightningElement {
 
     caseList;
+    errorMessage;
     //binding apex controller to the js so we use the wire annotation method so we can bind data into them
     //wire it 
     //who to wire (apex method name) 
@@ -16,10 +17,14 @@ export default class CaseListWithWireUsingApexController extends LightningElemen
 
         if (data) {
             this.caseList = data;
+            this.errorMessage = '';
             console.log('Cases received:', data);
         }
 
         if (error) {
+            // on the page
+            this.data = undefined;
+            this.errorMessage = error.body.message;
             console.error('Error is received while connecting to Apex Controller:', error);
         }
     }

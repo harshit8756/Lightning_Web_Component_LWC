@@ -10,5 +10,9 @@
                 {caseRecord.Priority}
             </div>
         </template>
+        <!-- handling error -->
+        <template if:true={errorMessage}>
+            Error when loading the cases : {errorerrorMessage}
+        </template>
     </lightning-card>
 </template>
