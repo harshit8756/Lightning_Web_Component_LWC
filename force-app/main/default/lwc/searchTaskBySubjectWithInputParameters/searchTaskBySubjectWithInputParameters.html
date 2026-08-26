@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Search Task by Subject with Input Parameters via Apex Controller (Working with the Server Side Component)">
+        <div class="slds-m-around_medium">
+            <!-- I need to fetch taks for a given subject -->
+            <!-- Let's assume I have received all the tasks for a given subject, then I want to display it in a List Status -RecordId - Description -->
+            <!-- If I have to do a multi-records, then I have to use the iterator to get the details -->
+            <template for:each={taskList} for:item="c">
+                <div key = {taskIterator.Id} >
+                    <b> {taskIterator.Id} - 
+                    {taskIterator.Status} - 
+                    {taskIterator.Description}
+                    </b>
+                </div>
+
+            </template>
+        </div>
+    </lightning-card>
+</template>
