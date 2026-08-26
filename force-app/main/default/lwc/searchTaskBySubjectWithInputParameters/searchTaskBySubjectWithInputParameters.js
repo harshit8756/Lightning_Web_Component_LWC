@@ -2,9 +2,11 @@ import { LightningElement, wire } from 'lwc';
 import fetchTasksBySubject from '@salesforce/apex/TaskControllerLWC.fetchTasksBySubject';
 export default class SearchTaskBySubjectWithInputParameters extends LightningElement {
     taskList;
-    @wire(fetchTasksBySubject)
+    subjectTask = 'Follow Up';
+    @wire(fetchTasksBySubject , {subjectString: '$subjectTask'}) //dynamically binding for reactivity
     wiredTasks({data , error}){
         if(data){
+            console.log('Data found ?' + data)
             this.taskList  = data; //list of tasks
         }
         else if(error){
