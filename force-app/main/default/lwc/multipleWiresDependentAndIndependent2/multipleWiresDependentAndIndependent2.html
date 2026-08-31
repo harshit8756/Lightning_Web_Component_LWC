@@ -2,7 +2,21 @@
     Use Case : First get an Account , after getting the account id , get all the Contacts belonging to that Account -->
 <template>
     <lightning-card title="Multiples Wires with Dependent Wires">
+        <h2>Accounts</h2>
+        <template class="slds-m-around_medium" for:each={getAccountList} for:item="accountList">
+            <div key = {accountList.id}>
+                {accountList.Name} - {accountList.Industry}
+            </div>
+        </template>
+        <br>
 
+        <h2>Contacts</h2>
+        <template class="slds-m-around_medium" for:each={getContactList} for:item="contactList">
+            <div key = {contactList.id}>
+                {contactList.Name} - {contactList.Email}
+            </div>
+
+        </template>
     </lightning-card>
     
 </template>
