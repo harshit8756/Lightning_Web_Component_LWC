@@ -1,3 +1,6 @@
 import { LightningElement } from 'lwc';
 
-export default class MultipleWiresDependentAndIndependent extends LightningElement {}
+export default class MultipleWiresDependentAndIndependent extends LightningElement {
+    getAccountList;
+    getContactList;
+}
