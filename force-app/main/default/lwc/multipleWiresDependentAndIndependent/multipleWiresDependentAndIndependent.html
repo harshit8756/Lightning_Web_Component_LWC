@@ -2,7 +2,7 @@
 <template>
     <lightning-card title="Multiple Wires in LWC Dependent and Independent">
         <h2>Accounts</h2>
-        <template for:each={getAccountList} for:item="accountList">
+        <template class="slds-m-around_medium" for:each={getAccountList} for:item="accountList">
             <div key = {accountList.id}>
                 {accountList.Name} - {accountList.Industry}
             </div>
@@ -10,7 +10,7 @@
         <br>
 
         <h2>Contacts</h2>
-        <template for:each={getContactList} for:item="contactList">
+        <template class="slds-m-around_medium" for:each={getContactList} for:item="contactList">
             <div key = {contactList.id}>
                 {contactList.Name} - {contactList.Email}
             </div>
