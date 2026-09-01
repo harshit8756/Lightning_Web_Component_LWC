@@ -6,7 +6,7 @@ If something goes wrong → show Error Toast. -->
 <template>
     <lightning-card title="Toast Notification [Create a Task] ">
         <div class="slds-m-around_medium">
-            <lightning-input lable = "Task Subject" onchange={handleSubjectChange}></lightning-input>
+            <lightning-input lable = "Task Subject" title="Task" onchange={handleSubjectChange}></lightning-input>
             <lightning-button label="Create Task" variant="brand" onclick={handleCreateTask}></lightning-button>
 
         </div>
