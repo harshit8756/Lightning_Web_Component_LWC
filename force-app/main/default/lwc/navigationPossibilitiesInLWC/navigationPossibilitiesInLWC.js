@@ -27,15 +27,6 @@ export default class NavigationPossibilitiesInLWC extends NavigationMixin(Lightn
 
     }
 
-    navigateToCustomPage() {
-
-
-    }
-
-    navigateToListViewPage() {
-
-    }
-
     navigateToWebPage() {
         this[NavigationMixin.Navigate]({
             type: 'standard__webPage',
