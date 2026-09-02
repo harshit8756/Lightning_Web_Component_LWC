@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>SampleMessageChannel</masterLabel>
+    <isExposed>true</isExposed>
+    <description>A sample message channel for LMS.</description>
+    <lightningMessageFields>
+        <fieldName>status</fieldName>
+        <description>The status is being passed.</description>
+    </lightningMessageFields>
+</LightningMessageChannel>
