@@ -4,6 +4,7 @@ export default class UseCase1 extends LightningElement {
     searchText = '';
     filterBy = 'All';
     sortBy = 'Name_Asc';
+
     columns = [
         {label : 'Name' , fieldName : 'name'},
         {label : 'Category' , fieldName : 'category'},
@@ -50,5 +51,22 @@ export default class UseCase1 extends LightningElement {
 
     handleSortChange(event){
         this.sortBy = event.detail.value;
+    }
+
+    get filteredDataItems(){
+        // add your logic here to filter the data based on searchText, filterBy and sortBy
+        const textToSearch = (this.searchText || '').toLowerCase();
+
+        let result = this.items.filter(items => {
+            // here I will check if the item is relevant to the search text and filter by category
+            const textMatch = items.name.toLowerCase().includes(textToSearch);
+            const filterByMatch = items.filterBy == this.filterBy;
+
+            return textMatch && filterByMatch;
+
+        });
+
+        return result;
+
     }
 }
