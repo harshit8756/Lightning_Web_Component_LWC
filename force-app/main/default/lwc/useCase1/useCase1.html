@@ -3,8 +3,32 @@
     <!-- filter by fields on the table -->
     <!-- sort by -->
     <!-- data table which will be showing results in run time -->
-    
-    <template title = "Searching , Filtering and Sorting Utility In LWC">
-        
-    </template>
+
+    <lightning-card title = "Searching, Filtering and Sorting Utility In LWC" icon-name="utility:search">
+        <div class="slds-m-around_medium">
+            <lightning-input label = "Search" 
+                placeholder = "Search Using" 
+                value = {searchText} 
+                onchange = {handleSearch}>
+            </lightning-input>
+
+            <lightning-combobox
+                label="Sort By"
+                placeholder="Select Field to Sort By"
+                name = 'sortBy'
+                value={sortBy}
+                options={sortOptions}
+                onchange={handleSortChange}
+            ></lightning-combobox>
+
+            <lightning-combobox
+                label = "Filter By"
+                name = "filterBy"
+                value={filterBy}
+                placeholder="Select Field to Filter By"
+                options={filterOptions}
+                onchange={handleFilterChange}>
+            </lightning-combobox>
+        </div>
+    </lightning-card>
 </template>
