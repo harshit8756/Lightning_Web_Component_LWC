@@ -1,0 +1,9 @@
+Simple LMS example: Button → Message → Another Component
+
+Imagine you have 2 LWC components:
+
+Component A                 Component B
+─────────────              ─────────────
+[Send Message]   ─ LMS ─→   Message: Hello!
+
+When you click the button in Component A, Component B displays "Hello!".
