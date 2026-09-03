@@ -7,7 +7,7 @@ export default class PublisherLMS extends LightningElement {
     @wire(MessageContext) messageContext;
     handleSendMessage(){
         const message = {
-            text : 'Message from Component A [Publisher]'
+            text : 'Hello from Component A [Publisher]'
         };
 
         publish(
