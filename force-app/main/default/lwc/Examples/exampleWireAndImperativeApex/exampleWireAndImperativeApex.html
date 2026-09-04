@@ -1,0 +1,9 @@
+<template>
+    <lightning-card>
+        <template for:each = {accounts} for:item = "accountIterator">
+            <div key = {accountIterator.Id}>
+                {accountIterator.Name} - {accountIterator.Industry}
+            </div>
+        </template>
+    </lightning-card>
+</template>
